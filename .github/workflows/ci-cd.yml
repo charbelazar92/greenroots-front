@@ -1,0 +1,52 @@
+# Objectif de ce workflow
+# - Vérifier que le front se construit (TypeScript + Vite)
+# - Déployer sur Vercel seulement si le build réussit
+
+# Nom du workflow (affiché sur GitHub)
+name: Build and deploy client on Vercel
+
+# Événements qui déclenchent le workflow
+on:
+  push: # Un push ou un merge sur main déclenche le workflow
+    branches:
+      - main
+  pull_request: # Une PR vers main déclenche le workflow (build seulement)
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_client:
+    runs-on: ubuntu-latest
+
+    # Identifiants du projet Vercel (variables GitHub)
+    env:
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+
+    steps:
+      # Récupérer le code du dépôt dans le runner
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Mettre en place Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Installer les dépendances (npm ci respecte le package-lock.json)
+      - name: Install dependencies
+        run: npm ci
+
+      # Récupérer la configuration et les variables (VITE_API_URL) depuis Vercel
+      - name: Pull Vercel configuration
+        run: npx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Build : si le TypeScript ou Vite échoue, le workflow s'arrête ici
+      - name: Build front
+        run: npx vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Déployer seulement sur un push vers main (pas sur une PR)
+      - name: Deploy build
+        if: github.event_name == 'push'
+        run: npx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
