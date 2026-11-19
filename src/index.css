@@ -1,0 +1,54 @@
+@import "./styles/reset.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+  color: #66736C;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: #0F5132;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Curseur personnalisé sur les éléments cliquables */
+a,
+button,
+select,
+summary,
+label[for],
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+[role="button"] {
+  cursor:
+    url("./assets/icons/cursor-v3-40.png") 6 3,
+    pointer;
+}

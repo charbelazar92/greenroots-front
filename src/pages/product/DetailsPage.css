@@ -1,0 +1,299 @@
+.details-page {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0;
+  padding-bottom: 2rem;
+  font-size: 0.85rem;
+  color: #66736C;
+}
+
+.breadcrumb a {
+  color: #66736C;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+ 
+  text-decoration: underline;
+ 
+}
+
+.card-details_image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+
+}
+
+.card-details_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-details_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-details_name{
+  margin: 0;
+  font-size: 1.4rem;
+  color: #0F5132;
+}
+
+.card-details_species {
+  margin: 0.2rem 0 0;
+  font-style: italic;
+  color: #0F5132;
+}
+
+.card-details_price {
+  text-align: right;
+  color: #0F5132;
+}
+
+
+.card-details_price_label {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #66736C;
+}
+
+.card-details_quantity {
+  display: flex;
+  flex-direction: column;
+  gap: rem;
+  color: #0F5132;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.quantity-details_selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  border: 1px solid #cccfcc;
+  width: 105px;
+  color: #0F5132;
+}
+
+
+.bouton-details_selector_1{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  background: #f5faf6;
+  border-right:1px solid #cccfcc ;
+  color: #0F5132;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+}
+
+.bouton-details_selector_2{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  background: #f5faf6;
+  border-left:1px solid #cccfcc ;
+  color: #0F5132;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+}
+
+.cart-details_button_product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0F5132;
+  text-decoration: none;
+  border:none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: white;
+
+  
+}
+
+.cart-details_button_product:hover{
+  background-color: #18342a;
+  
+}
+
+
+.cart-details_icon {
+  width: 1.1rem;
+  height: 1.1rem;
+
+
+}
+
+
+.added-to-cart_details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e6f4ea;
+  color: #0F5132;
+  border-radius: 8px;
+  padding:0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.added-to-cart_details img {
+  width: 1rem;
+  height: 1rem;
+}
+
+
+.card-details_description h2,
+.steps-description h2 {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #0F5132;
+  font-weight: bold;
+}
+
+.steps-description {
+  background-color: #e6f4ea;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+  gap: 2rem;
+  
+}
+
+
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.steps-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-number {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: #0F5132;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+
+}
+
+.availability.unavailable {
+  color: #B3261E;
+}
+
+.availability.available {
+  color: #0F5132;
+}
+
+.cart-details_button_product:disabled {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+
+/* À partir de 900px (desktop) : image à gauche, infos à droite */
+
+
+@media (min-width: 900px) {
+  .details-page {
+    max-width: 1100px;
+    padding: 2rem 1rem;
+  }
+
+  .breadcrumb  {
+   
+    padding: 0 0 1rem;
+    text-decoration: none;
+    padding-bottom: 2rem;
+  }
+
+  .product-layout {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .card-details_image {
+    flex: 1;
+    height: 480px;
+  }
+
+  .card-details_image img {
+    border-radius: 16px;
+  }
+
+  .card-details_info {
+    flex: 1;
+    padding: 0;
+  }
+
+  .card-details_name {
+    font-size: 2rem;
+  }
+
+  .card-details_species {
+    font-size: 1.1rem;
+  }
+
+  .card-details_price {
+    font-size: 1.8rem;
+  }
+
+  .cart-details_button_product {
+    width: 100%;
+    padding: 0.9rem 2rem;
+  }
+
+ 
+
+  .steps-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  
+  }
+
+}

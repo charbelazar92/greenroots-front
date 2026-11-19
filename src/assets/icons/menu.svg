@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
+  <title id="title">Menu burger GreenRoots</title>
+  <desc id="desc">Icône menu à trois traits fins vert forêt, sans fond.</desc>
+
+  <g
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="2"
+    stroke-linecap="round"
+  >
+    <path d="M6 9 H26"/>
+    <path d="M6 16 H26"/>
+    <path d="M6 23 H26"/>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+/* Mobile First */
+
+.home-benefits {
+  position: relative;
+  overflow: hidden;
+  padding-block: 32px;
+  padding-inline: max(48px, calc((100% - 1200px) / 2 + 48px));
+  background-color: #f5faf6;
+}
+
+.home-benefits__list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home-benefits__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-benefits__icon-wrapper {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 88px;
+}
+
+.home-benefits__icon {
+  width: 88px;
+  height: 88px;
+}
+
+.home-benefits__content {
+  flex: 1;
+}
+
+.home-benefits__title {
+  margin-bottom: 4px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.home-benefits__description {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.home-benefits::before,
+.home-benefits::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url("../../assets/images/leaves-illustration.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.home-benefits::before {
+  top: -20px;
+  right: -65px;
+}
+
+.home-benefits::after {
+  right: -60px;
+  bottom: -30px;
+  transform: rotate(20deg);
+} 
+
+/* Responsive */
+
+@media (min-width: 768px) {
+  .home-benefits {
+    padding-block: 28px;
+    z-index: 1;
+    border-bottom-left-radius: 50% 32px;
+    border-bottom-right-radius: 50% 32px;
+  }
+
+  .home-benefits__list {
+    flex-direction: row;
+    gap: 0;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .home-benefits__item {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-inline: clamp(16px, 3vw, 40px);
+    text-align: center;
+  }
+
+  .home-benefits__item + .home-benefits__item {
+    border-left: 1px solid #cbded2;
+  }
+
+  .home-benefits__icon-wrapper {
+    flex-basis: auto;
+  }
+
+  .home-benefits__icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .home-benefits__description {
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .home-benefits::before {
+    top: auto;
+    right: auto;
+    bottom: calc(clamp(180px, 18vw, 300px) * -0.15);
+    left: calc(clamp(180px, 18vw, 300px) * -0.4);
+    transform: scaleX(-1) rotate(15deg);
+  }
+
+  .home-benefits::after {
+    right: calc(clamp(180px, 18vw, 300px) * -0.4);
+    bottom: calc(clamp(180px, 18vw, 300px) * -0.15);
+    transform: rotate(15deg);
+  }
+
+.home-benefits::before,
+.home-benefits::after {
+  width: clamp(150px, 18vw, 300px);
+  height: clamp(150px, 18vw, 300px);
+}
+
+}

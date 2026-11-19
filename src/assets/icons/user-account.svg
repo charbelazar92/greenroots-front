@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Icône compte GreenRoots</title>
+  <desc id="desc">Icône de compte utilisateur vert forêt sur fond transparent.</desc>
+
+  <g
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="64" cy="42" r="14"/>
+    <path d="M38 91
+             C40 72 49 63 64 63
+             C79 63 88 72 90 91"/>
+  </g>
+</svg>

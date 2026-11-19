@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">Icône durable GreenRoots</title>
+
+  <!-- Pastille vert menthe -->
+  <circle cx="512" cy="512" r="466" fill="#E5F3E7"/>
+
+  <!-- Feuille -->
+  <path
+    d="M280 762
+       C245 694 250 607 284 532
+       C335 421 450 330 624 284
+       C678 270 734 260 790 255
+       C793 314 788 374 774 429
+       C739 568 668 671 570 724
+       C478 773 370 785 280 762Z"
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="48"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Nervure principale / tige -->
+  <path
+    d="M258 790 L664 384"
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="48"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Petite nervure -->
+  <path
+    d="M448 600 L448 510"
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="48"
+    stroke-linecap="round"
+  />
+</svg>

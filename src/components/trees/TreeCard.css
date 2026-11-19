@@ -1,0 +1,198 @@
+/* Dans TreeCard.css, ce qui concerne uniquement la carte d'un arbre */
+
+
+/* Mobile (par défaut) : image à gauche  */
+.card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.75rem;
+  background-color: white;
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.card-image {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-info {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.name {
+  font-weight: bold;
+  color: #0F5132;
+  font-size: 1rem;
+}
+
+.card .species {
+  font-style: italic;
+  color: #66736C;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.description {
+  color: #66736C;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.card-footer {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 0.5rem 0;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #0F5132;
+  font-size: 1.15rem;
+  flex: 0 0 auto;
+}
+
+.cart-button {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 40px;
+  padding: 6px 8px;
+  gap: 6px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #dcead6;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-button:hover {
+  background-color: #c8ddc0;
+}
+
+.cart-button-label {
+  display: inline;
+  color: #0f5132;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cart-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.product-link-button {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  background-color: #0F5132;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.product-link-button:hover {
+  background-color: #18342a;
+}
+
+/* Téléphones étroits -> retirer l'icone cart */
+@media (max-width: 359px) {
+  .cart-icon {
+    display: none;
+  }
+}
+
+/* À partir de 600px (tablette/desktop) : image passe en haut */
+@media (min-width: 600px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .card-image {
+    width: 100%;
+    border-bottom: 2px solid #dcead6;
+    box-shadow: 0 3px 5px rgb(15 81 50 / 12%);
+  }
+
+  .card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .card-info {
+    flex: 1;
+    margin-top: 12px;
+    padding-inline: 16px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .card .price {
+    font-size: 1.6rem;
+}
+
+  .card-footer {
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 12px 16px;
+}
+
+  .cart-button {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .cart-button-label {
+    font-size: 0.8rem;
+  }
+
+  .cart-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .product-link-button {
+    margin: 0 16px 16px;
+    padding: 10px 16px;
+  }
+
+}

@@ -1,0 +1,404 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  padding: 12px 48px;
+  background-color: #ffffff;
+}
+
+/* Marque et logo */
+
+.header-logo {
+  width: 48px;
+  height: auto;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-brand-name {
+  color: #0f5132;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.header-brand-tagline {
+  margin-top: 4px;
+  color: #0f5132;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+/* Navigation */
+
+.header-desktop-nav {
+  display: none;
+}
+
+.header-nav-link {
+  color: #0f5132;
+  text-decoration: none;
+}
+
+.header-nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.header-menu .header-nav-link {
+  display: block;
+  padding: 12px 16px;
+}
+
+/* Boutons du header */
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Compte utilisateur */
+
+.header-account {
+  position: relative;
+  display: none;
+}
+
+.header-account-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 48px;
+  gap: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 30%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-account-button:hover {
+  background-color: #dcead6;
+}
+
+.header-account-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header-account-name {
+  color: #4b5563;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.header-account-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: -30px;
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #d9dedb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+}
+
+.header-account-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-account-menu a {
+  display: block;
+  padding: 12px;
+  border-radius: 4px;
+  color: #0f5132;
+  text-decoration: none;
+}
+
+.header-account-menu a:hover {
+  background-color: #e8f5ec;
+}
+
+/* Connexion */
+
+.header-login-link {
+  display: none;
+  color: #0f5132;
+  text-decoration: none;
+}
+
+.header-login-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Panier hors des petits écrans */
+
+.header-cart-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #dcead6;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-cart-button:hover {
+  background-color: #c8ddc0;
+}
+
+.header-cart-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header-cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding-inline: 4px;
+  border-radius: 50%;
+  background-color: #0f5132;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Bouton du menu mobile */
+
+.header-menu-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header-menu-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.header-menu-close {
+  color: #0f5132;
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* Le compteur du burger est réservé aux petits écrans. */
+
+.header-menu-count {
+  display: none;
+}
+
+/* Menu mobile */
+
+.header-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.header-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header-menu-item {
+  padding: 12px 16px;
+  color: #0f5132;
+  font-size: 1rem;
+}
+
+/* Panier affiché dans le menu mobile */
+
+.header-menu-cart {
+  display: none;
+}
+
+.header-menu .header-menu-cart-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-menu-cart-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.header-menu-cart-count {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #dcead6;
+  color: #0f5132;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+/* Déconnexion */
+
+.header__logout-button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: #0f5132;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.header__logout-button:hover {
+  background-color: #e8f5ec;
+  text-decoration: none;
+}
+
+/* Animation du compteur après un ajout */
+
+@keyframes header-menu-count-pop {
+  0% {
+    transform: scale(0.6);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Très petits écrans */
+
+@media (max-width: 400px) {
+  .header {
+    padding-inline: 16px;
+  }
+
+  .header-cart-button {
+    display: none;
+  }
+
+  .header-menu-cart {
+    display: list-item;
+  }
+
+  /* Met en évidence le burger si le panier est rempli. */
+
+  .header-menu-button--has-cart {
+    border-radius: 50%;
+    background-color: #dcead6;
+  }
+
+  /* Affiche le nombre d'arbres sur le burger. */
+
+  .header-menu-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding-inline: 4px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    background-color: #0f5132;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+    animation: header-menu-count-pop 300ms ease-out;
+  }
+}
+
+/* Navigation desktop et tablette */
+
+@media (min-width: 768px) {
+  .header-desktop-nav {
+    display: block;
+  }
+
+  .header-account {
+    display: block;
+  }
+
+  .header-account-button {
+    display: flex;
+  }
+
+  .header-menu-button,
+  .header-menu {
+    display: none;
+  }
+
+  .header-desktop-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    color: #0f5132;
+  }
+
+  .header-login-link {
+    display: block;
+  }
+}
+
+/* Respecte les préférences d'accessibilité. */
+
+@media (prefers-reduced-motion: reduce) {
+  .header-menu-count {
+    animation: none;
+  }
+}

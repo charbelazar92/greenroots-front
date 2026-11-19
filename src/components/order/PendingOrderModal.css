@@ -1,0 +1,238 @@
+/* Arrière-plan de la modale */
+
+.pending-order-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: rgb(15 32 24 / 55%);
+}
+
+/* Contenu principal */
+
+.pending-order-modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 32px);
+  padding: 20px;
+  overflow-y: auto;
+  border: 1px solid #dce5de;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 18px 50px rgb(15 32 24 / 25%);
+}
+
+/* En-tête */
+
+.pending-order-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.pending-order-modal__header h2 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.pending-order-modal__close {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #edf5f1;
+  color: #0f5132;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pending-order-modal__close:hover {
+  background-color: #dcead6;
+}
+
+/* Message du backend */
+
+.pending-order-modal__message {
+  margin: 16px 0 0;
+  color: #66736c;
+  line-height: 1.5;
+}
+
+/* Informations de la commande */
+
+.pending-order-modal__summary {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #f5faf6;
+}
+
+.pending-order-modal__summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.pending-order-modal__summary dt,
+.pending-order-modal__summary dd {
+  margin: 0;
+}
+
+.pending-order-modal__summary dt {
+  color: #66736c;
+}
+
+.pending-order-modal__summary dd {
+  color: #0f5132;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Articles */
+
+.pending-order-modal__items {
+  margin-top: 20px;
+}
+
+.pending-order-modal__items h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.pending-order-modal__items ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pending-order-modal__items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dce5de;
+}
+
+.pending-order-modal__items li div {
+  display: grid;
+  gap: 2px;
+}
+
+.pending-order-modal__items li div span:first-child {
+  color: #0f5132;
+  font-weight: 600;
+}
+
+.pending-order-modal__items li div span:last-child {
+  color: #66736c;
+  font-size: 14px;
+}
+
+.pending-order-modal__items strong {
+  flex-shrink: 0;
+  color: #0f5132;
+}
+
+/* Total */
+
+.pending-order-modal__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  color: #0f5132;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Actions */
+
+.pending-order-modal__actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.pending-order-modal__primary,
+.pending-order-modal__secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 2px solid #0f5132;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pending-order-modal__primary {
+  background-color: #0f5132;
+  color: #ffffff;
+}
+
+.pending-order-modal__primary:hover {
+  background-color: #18342a;
+}
+
+.pending-order-modal__secondary {
+  background-color: #ffffff;
+  color: #0f5132;
+}
+
+.pending-order-modal__secondary:hover {
+  background-color: #edf5f1;
+}
+
+/* Accessibilité clavier */
+
+.pending-order-modal button:focus-visible,
+.pending-order-modal a:focus-visible {
+  outline: 3px solid #7baa88;
+  outline-offset: 3px;
+}
+
+/* Adaptation desktop */
+
+@media (min-width: 600px) {
+  .pending-order-modal {
+    padding: 28px;
+  }
+
+  .pending-order-modal__header h2 {
+    font-size: 30px;
+  }
+
+  .pending-order-modal__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pending-order-modal__primary {
+    order: 2;
+  }
+
+  .pending-order-modal__secondary {
+    order: 1;
+  }
+}

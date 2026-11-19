@@ -1,0 +1,153 @@
+.delete-account {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #d9dedb;
+}
+
+.delete-account h2 {
+  color: #004d40;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.delete-account__description {
+  margin-top: 12px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.delete-account__confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Champ du mot de passe */
+
+.delete-account__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.delete-account__form-group label {
+  color: #004d40;
+  font-weight: bold;
+}
+
+.delete-account__form-group input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d9dedb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #4b5563;
+  font: inherit;
+}
+
+.delete-account__error-message {
+  color: rgba(204, 13, 13, 0.774);
+  font-size: 14px;
+}
+
+/* Boutons */
+
+.delete-account__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.delete-account__open-button {
+  margin-top: 20px;
+  padding: 12px 16px;
+  border: 1px solid #b42318;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #b42318;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-account__open-button:hover {
+  background-color: #fff1f0;
+}
+
+.delete-account__open-button:active {
+  transform: scale(0.98);
+}
+
+.delete-account__submit-button,
+.delete-account__cancel-button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-account__submit-button {
+  border: 1px solid #b42318;
+  background-color: #b42318;
+  color: #ffffff;
+}
+
+.delete-account__submit-button:hover {
+  border-color: #912018;
+  background-color: #912018;
+}
+
+.delete-account__cancel-button {
+  border: 1px solid #004d40;
+  background-color: #ffffff;
+  color: #004d40;
+}
+
+.delete-account__cancel-button:hover {
+  background-color: #e8f5ec;
+}
+
+.delete-account__submit-button:active,
+.delete-account__cancel-button:active {
+  transform: scale(0.98);
+}
+
+/* Boutons désactivés */
+
+.delete-account__submit-button:disabled {
+  border-color: #b42318;
+  background-color: #b42318;
+}
+
+.delete-account__cancel-button:disabled {
+  background-color: #ffffff;
+}
+
+.delete-account__submit-button:disabled,
+.delete-account__cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Adaptation desktop */
+
+@media (min-width: 1024px) {
+  .delete-account__form-group label {
+    font-size: 18px;
+  }
+
+  .delete-account__form-group input {
+    padding: 14px 16px;
+    font-size: 18px;
+  }
+
+  .delete-account__actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}

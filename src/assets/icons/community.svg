@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">Icône communauté GreenRoots</title>
+
+  <!-- Pastille vert menthe -->
+  <circle cx="512" cy="512" r="466" fill="#E5F3E7"/>
+
+  <!-- Groupe de personnes -->
+  <g
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="44"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <!-- Personne centrale -->
+    <circle cx="512" cy="370" r="88"/>
+    <path d="M350 660
+             C365 545 426 490 512 490
+             C598 490 659 545 674 660"/>
+
+    <!-- Personne gauche -->
+    <circle cx="330" cy="420" r="66"/>
+    <path d="M214 660
+             C226 574 270 532 330 532
+             C374 532 410 555 432 599"/>
+
+    <!-- Personne droite -->
+    <circle cx="694" cy="420" r="66"/>
+    <path d="M592 599
+             C614 555 650 532 694 532
+             C754 532 798 574 810 660"/>
+
+    <!-- Ligne basse commune -->
+    <path d="M214 660 H810"/>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+/* Mobile */
+
+.home-mission {
+  padding-block: 32px;
+  padding-inline: max(48px, calc((100% - 1200px) / 2 + 48px));
+  background-color: #fff;
+}
+
+.home-mission__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.home-mission__heading {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.home-mission__image {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.home-mission__description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Tablette et desktop */
+
+@media (min-width: 768px) {
+  .home-mission {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-mission__container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+    row-gap: 24px;
+    align-items: start;
+  }
+
+  .home-mission__heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .home-mission__image {
+    grid-column: 1;
+    grid-row: 2;
+    height: 360px;
+  }
+
+  .home-mission__description {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    max-width: 560px;
+  }
+
+  /* Illustration décorative derrière le contenu */
+
+  .home-mission::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    bottom: -60px;
+    width: clamp(260px, 30vw, 440px);
+    height: clamp(260px, 30vw, 440px);
+    background-image: url('../../assets/images/leaves-illustration.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+}

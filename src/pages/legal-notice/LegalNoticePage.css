@@ -1,0 +1,42 @@
+
+.legal-notice {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f5faf6;
+}
+
+
+.legal-notice h1 {
+  font-family: "Playfair Display", serif;
+  color: #0F5132;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.legal-notice h2 {
+  font-family: "Playfair Display", serif;
+  color: #6B8F6F;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+
+.legal-notice p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+
+.legal-notice a {
+  color:#0F5132;
+}
+
+
+.legal-notice a:hover {
+  color: #c96a3d;
+}
+
+

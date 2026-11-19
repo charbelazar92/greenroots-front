@@ -1,0 +1,340 @@
+.admin-orders_page {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 2rem 1rem;
+}
+
+/* Fil d'Ariane  */
+
+.admin-orders_breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0 2rem;
+  font-size: 0.85rem;
+  color: #66736C;
+  text-decoration: none;
+}
+
+.admin-orders_breadcrumb-link {
+  color: #66736C;
+  text-decoration: none;
+}
+
+.admin-orders_breadcrumb-link:hover {
+  color: #0F5132;
+  text-decoration: underline;
+}
+
+
+
+.admin-orders_breadcrumb-link:last-child {
+  color: #0F5132;
+  font-weight: 600;
+}
+
+
+/* Header */
+
+.admin-orders_page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.admin-orders_page-title {
+  font-size: 1.8rem;
+  color: #0F5132;
+  font-weight: bold;
+  margin: 0;
+}
+
+.admin-orders_page-description {
+  color: #66736C;
+  margin: 0;
+}
+
+/* Filtres */
+
+.admin-orders_filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-orders_status-select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border-color: #0F5132;
+  background-color: white;
+}
+
+/* Compteur et message vide*/
+
+.admin-orders_count {
+ margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+
+.admin-orders_empty {
+  margin: 0 0 1rem;
+  padding: 1.5rem;
+  border: 1px solid #EDEBDF;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  color: #66736C;
+}
+
+/*Tableau*/
+
+.admin-orders_table-wrapper {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #EDEBDF;
+  border-radius: 8px;
+}
+
+.admin-orders_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.admin-orders_head-row,
+.admin-orders_row {
+  display: grid;
+  grid-template-columns: 1fr 138px 156px 136px 134px 178px;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.admin-orders_head-row {
+  border-bottom: 1px solid #EDEBDF;
+  align-items: center;
+}
+
+/* Centre le contenu  du titre du tableau */
+.admin-orders_head-cell {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #66736C;
+  text-align: center;
+}
+
+
+
+.admin-orders_row {
+  border-bottom: 1px solid #EDEBDF;
+}
+/* Centre le contenu des cellules */
+.admin-orders_row td {
+  text-align: center;
+}
+
+.admin-orders_row:hover {
+  background: rgba(124, 148, 115, 0.05);
+}
+
+.admin-orders_number {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1C2019;
+}
+
+.admin-orders_date {
+  font-size: 0.85rem;
+  color: #66736C;
+}
+
+.admin-orders_firstname {
+  font-size: 0.85rem;
+  color: #66736C;
+}
+
+.admin-orders_price {
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.admin-orders_deleted-user {
+  font-style: italic;
+  color: #9A9C93;
+}
+
+/* Badges de statut*/
+
+.admin-orders_badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.admin-orders_badge-validated {
+  background: #DCE3D3;
+  color: #0F5132;
+}
+
+.admin-orders_badge-pending {
+  background: #F1DCD5;
+  color: #A4502B;
+}
+
+.admin-orders_badge-cancelled {
+  background: #E7E5D9;
+  color: #66736C;
+}
+
+/* Boutton d'actions*/
+
+.admin-orders_actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+
+.admin-orders_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.8rem;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.admin-orders_button-validate {
+  background: #DCE3D3;
+  color: #0F5132;
+}
+
+.admin-orders_button-validate:hover {
+  background-color: #0F5132;
+  color: white;
+}
+
+
+
+
+.admin-orders_button-cancel {
+  background: #F1DCD5;
+  color: #A4502B;
+}
+
+
+.admin-orders_button-cancel:hover {
+  background: #C96A3D;
+  color: white;
+
+}
+
+.admin-orders_button:focus-visible {
+  outline: 2px solid #0F5132;
+  outline-offset: 2px;
+}
+
+.admin-orders_no-action {
+  font-size: 0.75rem;
+  color: #9A9C93;
+}
+
+.admin-orders_actions-cell {
+  border-left: 5px solid #0F5132 ;
+}
+
+
+
+/* À partir de 900px (desktop) */
+
+@media (max-width: 900px) {
+  .admin-orders_page {
+     max-width: 480px;
+    padding: 0;
+  }
+
+  .admin-orders_filters {
+    flex-direction: column;
+  }
+
+  .admin-orders_table-wrapper {
+    background: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .admin-orders_thead {
+    display: none;
+  }
+
+  /* Chaque ligne devient une carte :
+     n° + statut / date + montant / prénom / actions sur toute la largeur */
+  .admin-orders_row {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 0.75rem;
+    row-gap: 0.1rem;
+    padding: 0.75rem 0;
+  }
+
+
+   .admin-orders_row td {
+    text-align: left;
+  }
+
+  .admin-orders_actions {
+    justify-content: flex-start;
+  }
+
+  .admin-orders_number {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .admin-orders_status {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .admin-orders_date {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .admin-orders_price {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .admin-orders_firstname-lastname {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .admin-orders_actions-cell {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    padding-top: 0.5rem;
+    border-top: 0.5px solid #0F5132;
+    border-left: none;
+  }
+}

@@ -1,0 +1,54 @@
+.quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid #dce5de;
+  border-radius: 8px;
+  background-color: #f5faf6;
+  color: #0f5132;
+  overflow: hidden;
+}
+
+.quantity-selector button {
+  width: 2rem;
+  height: 2.75rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.quantity-selector button:hover:not(:disabled) {
+  background-color: #e6f4ea;
+}
+
+.quantity-selector button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.quantity-selector span {
+  min-width: 1.5rem;
+  padding: 0 0.25rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.quantity-selector button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+}
+
+@media (min-width: 400px) {
+  .quantity-selector button {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .quantity-selector button {
+    width: 2.75rem;
+  }
+}

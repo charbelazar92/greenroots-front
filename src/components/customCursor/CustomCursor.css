@@ -1,0 +1,102 @@
+/* Curseur personnalisé : désactivé par défaut */
+.custom-cursor {
+    --cursor-rotation: 0deg;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+
+    width: 28px;
+    height: 28px;
+
+    pointer-events: none;
+    opacity: 0;
+
+    /*
+     * Le point actif est légèrement décalé vers la pointe du sapin.
+     * Modifie -6px et -3px si le clic semble mal positionné.
+     */
+    margin-left: -6px;
+    margin-top: -3px;
+
+    transition: opacity 120ms ease;
+    will-change: transform;
+}
+
+/* Affiche le curseur lorsqu'il est dans la page */
+.custom-cursor--visible {
+    opacity: 1;
+}
+
+/* Image du sapin */
+.custom-cursor__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transform: rotate(var(--cursor-rotation)) scale(1);
+    transform-origin: center;
+    transition: transform 100ms ease;
+    will-change: transform;
+}
+
+/* Agrandissement sur les éléments cliquables */
+.custom-cursor--interactive .custom-cursor__image {
+    transform: rotate(var(--cursor-rotation)) scale(1.2);
+}
+
+/* Petite vibration pendant le clic */
+.custom-cursor--clicking .custom-cursor__image {
+    animation: tree-cursor-click 180ms ease-in-out;
+}
+
+/* Mouvement rapide de gauche à droite */
+@keyframes tree-cursor-click {
+    0% {
+        transform: rotate(var(--cursor-rotation)) scale(1.2)
+            translateX(0);
+    }
+
+    25% {
+        transform: rotate(var(--cursor-rotation)) scale(1.1)
+            translateX(-2px);
+    }
+
+    50% {
+        transform: rotate(var(--cursor-rotation)) scale(1.1)
+            translateX(2px);
+    }
+
+    75% {
+        transform: rotate(var(--cursor-rotation)) scale(1.1)
+            translateX(-1px);
+    }
+
+    100% {
+        transform: rotate(var(--cursor-rotation)) scale(1.2)
+            translateX(0);
+    }
+}
+
+/* Masque le curseur natif uniquement sur ordinateur */
+@media (hover: hover) and (pointer: fine) {
+    html.custom-cursor-enabled,
+    html.custom-cursor-enabled body,
+    html.custom-cursor-enabled body * {
+        cursor: none !important;
+    }
+}
+
+/* Désactive les animations selon les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    .custom-cursor,
+    .custom-cursor__image {
+        transition: none;
+    }
+
+    .custom-cursor--clicking .custom-cursor__image {
+        animation: none;
+    }
+}

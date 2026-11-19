@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Icône panier avec arbre GreenRoots</title>
+  <desc id="desc">Panier vert foncé avec un sapin qui émerge du panier, sans barre supérieure derrière l'arbre.</desc>
+
+  <!-- Panier -->
+  <g
+    fill="none"
+    stroke="#0F5132"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <!-- Poignée + montant gauche -->
+    <path d="M18 34 H33 L43 82" />
+
+    <!-- Cuve sans barre supérieure -->
+    <path d="M43 82 H88 L96 52" />
+
+    <!-- Roues -->
+    <circle cx="50" cy="98" r="6" fill="#0F5132" stroke="none" />
+    <circle cx="82" cy="98" r="6" fill="#0F5132" stroke="none" />
+  </g>
+
+  <!-- Sapin qui sort du panier -->
+  <g fill="#0F5132">
+    <path d="
+      M64 18
+      L53 34
+      H58
+      L48 47
+      H55
+      L43 63
+      H60
+      V77
+      H68
+      V63
+      H85
+      L73 47
+      H80
+      L70 34
+      H75
+      Z
+    "/>
+  </g>
+</svg>
