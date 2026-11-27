@@ -19,6 +19,11 @@ export function UpdateTreeModal({ tree, onClose, onSaved }: UpdateTreeModalProps
 
   async function updateTree(formData: FormData) {
     setErrorMessage("");
+
+    //Correction m1 à faire 
+     // Une case décochée n'est pas envoyée par le formulaire :
+    // on envoie toujours "on" ou "off" pour que le back sache quoi faire
+    //formData.set("available", formData.get("available") === "on" ? "on" : "off");
     try {
       const response = await fetchWithAuth(`${import.meta.env.VITE_API_URL}/api/trees/${tree.slug}`, {
         method: "PATCH",

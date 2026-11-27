@@ -124,7 +124,6 @@ Le fichier `.env` n'est **jamais versionné** ; seul le `.env.example` l'est.
 
 | Rôle | Email | Mot de passe |
 | --- | --- | --- |
-| Administrateur | `admin@greenroots.fr` | `Admin123!` |
 | Utilisateur | `julien.dupont@example.com` | `User123!` |
 | Utilisateur | `sofia.martin@example.com` | `User123!` |
 
@@ -241,7 +240,7 @@ Il n'y a pas, à ce stade, de pipeline CI automatisé. La qualité est garantie 
 
 | Composant | Hébergeur | URL | Notes |
 | --- | --- | --- | --- |
-| Frontend | Vercel | `[à compléter avant la soutenance]` | Variable `VITE_API_URL` à renseigner ; commande de build : `npm run build` |
+| Frontend | Vercel | `https://greenroots-app.vercel.app` | Variable `VITE_API_URL` à renseigner ; commande de build : `npm run build` |
 
 Points d'attention en production :
 
